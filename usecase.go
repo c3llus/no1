@@ -20,6 +20,7 @@ func CreateBaseDirectory() {
 	os.MkdirAll(baseDirectory, os.ModePerm)
 }
 
+// JAWABAN A
 func ExtractZip() {
 	archive, err := zip.OpenReader(filePathZip)
 	if err != nil {
@@ -83,6 +84,7 @@ func isNotDrakor(f *zip.File) bool {
 	return false
 }
 
+// JAWABAN B
 func DrakorSorter(fileName string) (fileDest string) {
 
 	var (
@@ -98,6 +100,7 @@ func DrakorSorter(fileName string) (fileDest string) {
 		os.MkdirAll(filePath, os.ModePerm)
 	}
 
+	// JAWABAN C
 	fileName = getDramaName(fileName) + extPNG
 
 	return strsToPath(baseDirectory, genre, fileName)
